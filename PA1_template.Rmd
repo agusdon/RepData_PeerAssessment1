@@ -1,25 +1,22 @@
 ---
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
+title: "PA1_template.Rmd"
+author: "Aaron M Gusdon"
+date: "May 11, 2018"
+output: html_document
 ---
 
+```{r, echo=FALSE,results='hide',warning=FALSE,message=FALSE}
+library(ggplot2)
+library(scales)
+library(Hmisc)
+```
 
-## Loading and preprocessing the data
+# Load and process the data
+##Load the data
+```{r, results='markup',warning=TRUE,message=TRUE}
+if(!file.exists('activity.csv')){
+  unzip('activity.zip')
+}
+data <- read.csv('activity.csv')
+```
 
-
-
-## What is mean total number of steps taken per day?
-
-
-
-## What is the average daily activity pattern?
-
-
-
-## Imputing missing values
-
-
-
-## Are there differences in activity patterns between weekdays and weekends?
