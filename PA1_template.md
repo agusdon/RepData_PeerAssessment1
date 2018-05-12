@@ -35,7 +35,7 @@ median(total_steps,na.rm=TRUE)
 qplot(total_steps,binwidth=1000,xlab="Total Steps per Day")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
 
 ## What is the average daily activity pattern?
 
@@ -49,7 +49,7 @@ ggplot(data=avg,aes(x=interval,y=steps))+
   ylab("Average steps taken")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
 
 ### Which 5-min interval contains the maximum number of steps?
 
@@ -96,7 +96,7 @@ ImputedStepsPerDay <- tapply(ImputedData$steps,ImputedData$date,sum)
 qplot(ImputedStepsPerDay,xlab='Total Steps per Day',ylab='Frequency of Steps',binwidth=500)
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
 
 ### The mean and median total steps per day can be calculated
 
@@ -137,4 +137,4 @@ ggplot(avg2,aes(interval,steps))+
   ylab("Number of Steps")
 ```
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
+![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png)
